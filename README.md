@@ -1,9 +1,9 @@
 
-# 🧠 Adaptive Exponential Integrate-and-Fire (AdEx) Neuron Model
+# Adaptive Exponential Integrate-and-Fire (AdEx) Neuron Model
 
 ---
 
-## 📌 Topic
+## Topic
 
 **Adaptive Exponential Integrate-and-Fire (AdEx) Neuron Modeling, Simulation, and Analysis**
 
@@ -18,7 +18,7 @@ In this project, we derive the AdEx equations from first principles, implement t
 ---
 
 # ------------------------------------------------------------
-# ✅ 1. Introduction
+#  1. Introduction
 # ------------------------------------------------------------
 
 Biological neurons integrate electrical input, fire action potentials (spikes), and adapt dynamically over time. Traditional models either oversimplify this process (LIF) or become mathematically heavy (Hodgkin–Huxley). The AdEx model provides a middle ground — computationally efficient yet capable of reproducing realistic firing behaviors.
@@ -32,7 +32,7 @@ The model adds:
 ---
 
 # ------------------------------------------------------------
-# ✅ 2. Model Explanation
+# 2. Model Explanation
 # ------------------------------------------------------------
 
 ### 🔹 State Variables
@@ -40,7 +40,7 @@ The model adds:
 - **Membrane potential**: \( V(t) \)
 - **Adaptation current**: \( w(t) \)
 
-### 🔹 Core Concepts
+### Core Concepts
 
 | Mechanism | Biological Meaning | Mathematical Effect |
 |----------|--------------------|---------------------|
@@ -52,10 +52,10 @@ The model adds:
 ---
 
 # ------------------------------------------------------------
-# ✅ 3. Mathematical Model
+# 3. Mathematical Model
 # ------------------------------------------------------------
 
-### 🔹 Membrane Voltage Equation
+### Membrane Voltage Equation
 
 \[
 C \frac{dV}{dt} =
@@ -65,13 +65,13 @@ C \frac{dV}{dt} =
 + I_{\text{ext}}(t)
 \]
 
-### 🔹 Adaptation Equation
+### Adaptation Equation
 
 \[
 \tau_w \frac{dw}{dt} = a (V - E_L) - w
 \]
 
-### 🔹 Spike and Reset Rule
+### Spike and Reset Rule
 
 If \( V(t) \ge V_{\text{spike}} \):
 
@@ -83,15 +83,15 @@ w \leftarrow w + b
 ---
 
 # ------------------------------------------------------------
-# ✅ 4. Method & Implementation
+# 4. Method & Implementation
 # ------------------------------------------------------------
 
-### 🔹 Numerical Method
+### Numerical Method
 - **Euler forward integration**
 - Time step: `dt = 0.1 ms`
 - Total duration: `T = 1000–2000 ms`
 
-### 🔹 Files in the Project
+### Files in the Project
 ```
 simulate_adex.py      → Core simulator
 visualize_adex.py     → Experiments + plots
@@ -99,7 +99,7 @@ plots/                → Saved output figures
 README.md             → This documentation
 ```
 
-### 🔹 Simulation Steps
+### Simulation Steps
 1. Initialize `V` and `w`
 2. For each timestep:
    - Compute `dV/dt` and `dw/dt`
@@ -111,14 +111,14 @@ README.md             → This documentation
 ---
 
 # ------------------------------------------------------------
-# ✅ 5. Results & Analysis
+# 5. Results & Analysis
 # ------------------------------------------------------------
 
 This section contains all generated plots and interpretations.
 
 ---
 
-## 🔹 5.1 Non-Adapting EIF Regime
+##  5.1 Non-Adapting EIF Regime
 
 **Parameters:** `a = 0`, `b = 0`
 
@@ -132,7 +132,7 @@ This section contains all generated plots and interpretations.
 
 ---
 
-## 🔹 5.2 Adapting Regular Spiker
+## 5.2 Adapting Regular Spiker
 
 **Parameters:** `a = 2`, `b = 60`
 
@@ -146,7 +146,7 @@ This section contains all generated plots and interpretations.
 
 ---
 
-## 🔹 5.3 Bursting-Like Regime (Exploratory)
+## 5.3 Bursting-Like Regime (Exploratory)
 
 **Plot:**  
 ![Bursting](plots/adex_bursting.png)
@@ -157,7 +157,7 @@ This section contains all generated plots and interpretations.
 
 ---
 
-## 🔹 5.4 F–I Curve (Firing Rate vs Input Current)
+## 5.4 F–I Curve (Firing Rate vs Input Current)
 
 **Plot:**  
 ![FI Curve](plots/adex_fi_curve.png)
@@ -170,7 +170,7 @@ This section contains all generated plots and interpretations.
 ---
 
 # ------------------------------------------------------------
-# ✅ 6. Key Insights
+# 6. Key Insights
 # ------------------------------------------------------------
 
 - The exponential term creates biologically realistic spike onset
@@ -181,7 +181,7 @@ This section contains all generated plots and interpretations.
 ---
 
 # ------------------------------------------------------------
-# ✅ 7. Conclusions
+#  7. Conclusions
 # ------------------------------------------------------------
 
 The AdEx neuron model successfully captures essential neuronal dynamics using only two differential equations and a reset rule. It reproduces realistic firing patterns such as tonic spiking, spike-frequency adaptation, and bursting, all while remaining computationally efficient. The F–I curve further reveals how adaptation shapes neuronal excitability, demonstrating the model’s value in neural coding, cortical dynamics, and spiking neural network research. Overall, AdEx provides a versatile and biologically grounded tool for exploring single-neuron behavior and building scalable neural simulations.
@@ -189,7 +189,7 @@ The AdEx neuron model successfully captures essential neuronal dynamics using on
 ---
 
 # ------------------------------------------------------------
-# ✅ 8. Future Work
+# 8. Future Work
 # ------------------------------------------------------------
 
 - Phase-plane (V–w) stability analysis
@@ -198,5 +198,3 @@ The AdEx neuron model successfully captures essential neuronal dynamics using on
 - Comparison with Hodgkin–Huxley dynamics
 
 ---
-
-# ✅ End of README ✅
