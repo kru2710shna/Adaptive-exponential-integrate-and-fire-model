@@ -9,7 +9,7 @@
 
 ---
 
-## 📝 200-Word Description
+## 200-Word Description
 
 The Adaptive Exponential Integrate-and-Fire (AdEx) model is a powerful mathematical framework that bridges the gap between simple neuron models like Leaky Integrate-and-Fire (LIF) and biologically detailed models like Hodgkin–Huxley (HH). Unlike basic LIF neurons, which spike with a fixed threshold and lack realistic firing dynamics, AdEx incorporates both an exponential spike-onset mechanism and a slow adaptation current. This allows it to reproduce real neuronal behaviors such as tonic firing, spike-frequency adaptation, bursting, and threshold dynamics observed in cortical neurons.
 
@@ -35,7 +35,7 @@ The model adds:
 # 2. Model Explanation
 # ------------------------------------------------------------
 
-### 🔹 State Variables
+### State Variables
 
 - **Membrane potential**: \( V(t) \)
 - **Adaptation current**: \( w(t) \)
